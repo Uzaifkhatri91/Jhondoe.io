@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .loader {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .loader:before {
+    content: '';
+    width: 80px;
+    height: 15px;
+    background: #f0808050;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow324 0.5s linear infinite;
+  }
+  
+  .loader:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #f08080;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    animation: jump7456 0.5s linear infinite;
+  }
+  
+  @keyframes jump7456 {
+    15% {
+      border-bottom-right-radius: 15px;
+    }
+  
+    25% {
+      transform: translateY(9px) rotate(22.5deg);
+    }
+  
+    50% {
+      transform: translateY(18px) scale(1, .9) rotate(45deg);
+      border-bottom-right-radius: 70px;
+    }
+  
+    75% {
+      transform: translateY(9px) rotate(67.5deg);
+    }
+  
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
+  }
+  
+  @keyframes shadow324 {
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+  
+    50% {
+      transform: scale(1.2, 1);
+    }
+  }
+  
+
+/* --------------------------Footer--------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.service-section{
+    padding: 50px 0;
+    color: #202020;
+}
+.service-section .container{
+    max-width: 1240px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.service-section .service-column{
+    max-width: 33%;
+    padding: 0 30px;
+}
+.service-section .service-column .single-service{
+    position: relative;
+    margin-top: 30px;
+    background-color: #232323;
+    border-radius: 0;
+    padding: 40px 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+}
+.service-section .service-column .single-service .content{
+    position: relative;
+    z-index: 2;
+}
+.service-section .service-column .single-service .content .icon{
+    display: inline-block;
+    margin-bottom: 25px;
+    width: 70px;
+    height: 70px;
+    background-color: #68D1D9;
+    border-radius: 50%;
+    line-height: 70px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 30px;
+    transition: all 0.5s;
+}
+.service-section .service-column .single-service:hover .icon{
+    color: #68D1D9;
+    background-color: #FFFFFF;
+}
+.service-section .service-column .single-service .content .main-title{
+    margin-bottom: 20px;
+    font-weight: 550;
+    font-size: 30px;
+    color: #FFFFFF;
+    transition: color 0.3s;
+}
+.service-section .service-column .single-service .content .description{
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+    transition: color 0.3s;
+}
+.service-section .service-column .single-service:hover .description{
+    color: #FFFFFF;
+}
+.service-section .service-column .single-service .content .learn-more{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    font-weight: 500;
+    transition: all .3s;
+}
+.service-section .service-column .single-service .content .learn-more:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #68D1D9;
+    transition: all .5s;
+}
+.service-section .service-column .single-service:hover .learn-more:after{
+    background-color: #FFFFFF;
+}
+.service-section .service-column .single-service .circle-before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+    width: 110px;
+    height: 110px;
+    background-color: #68D1D9;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.service-section .service-column .single-service:hover .circle-before{
+    width: 100%;
+    height: 100%;
+    transform: none;
+    border: 0;
+    border-radius: 0;
+    opacity: 0.8;
+}
+@media (max-width:991px) {
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .single-service{
+        width: 320px;
+        align-self: center;
+        justify-self: center;
+    }
+}
